@@ -13,6 +13,6 @@ int main(void)
 	for (; n <= 9; n++)
 		putchar(48 + n);
 
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
