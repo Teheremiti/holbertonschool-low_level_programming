@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <time.h>
 #include "main.h"
 
 /**
- * main - Print alphabet
- * Return: 0
+ * print_alphabet - Print alphabet
+ * Return: void
  */
 
 void print_alphabet(void)
@@ -14,5 +15,4 @@ void print_alphabet(void)
 		_putchar(ch);
 
 	_putchar('\n');
-	return (0);
 }
