@@ -13,7 +13,7 @@ void fizz_buzz(void)
 	for (; n <= 100; n++)
 	{
 		if (n % 3 == 0 && n % 5 == 0)
-                        printf("FizzBuzz ");
+			printf("FizzBuzz ");
 
 		else if (n % 3 == 0)
 			printf("Fizz ");
