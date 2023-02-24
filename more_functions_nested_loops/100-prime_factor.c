@@ -11,7 +11,7 @@ int prime_factor(void)
 	long i = 3;
 	int factor = 0;
 
-	for (; i*i <= n; i += 2)
+	for (; i * i <= n; i += 2)
 	{
 		if (n % i == 0)
 		{
