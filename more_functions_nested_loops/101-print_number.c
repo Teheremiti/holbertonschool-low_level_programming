@@ -13,7 +13,7 @@ void print_number(int n)
 
 	if (n == INT_MIN)
 	{
-		lastDigit = - (n % 10);
+		lastDigit = -(n % 10);
 		n += 1;
 	}
 
