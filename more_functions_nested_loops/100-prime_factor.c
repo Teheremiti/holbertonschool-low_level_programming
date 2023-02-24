@@ -26,7 +26,7 @@ int prime_factor(void)
 		factor = n;
 
 	printf("%d\n", factor);
-	return(factor);
+	return (factor);
 }
 
 
