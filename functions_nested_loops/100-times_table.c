@@ -1,54 +1,49 @@
 #include "main.h"
-
 /**
- * print_times_table - Print the n times table if 0 <= n <= 15
+ * print_times_table - Print the n times table
  * @n: Input int
  * Return: void
  */
-
 void print_times_table(int n)
 {
-	int p = 0;
+	int i = 0, k, product;
 
 	if (n < 0 || n > 15)
 		return;
-
-	for (; p <= n; p++)
+	for (; i <= n; i++)
 	{
-		int i = 0;
+		k = 1;
 
-		for (; i <= p; i++)
+		_putchar('0');
+		_putchar(',');
+		for (; k <= n; k++)
 		{
-			int k = 1;
+			product = i * k;
 
-			_putchar('0');
-			_putchar(',');
-
-			for (; k <= p; k++)
+			if (product < 10)
 			{
-				int multiple = i * k;
-
-				if (multiple <= 9)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + multiple);
-				}
-				else
-				{
-					_putchar(' ');
-					_putchar('0' + multiple / 10);
-					_putchar('0' + multiple % 10);
-				}
-
-				if (k != p)
-					_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + product % 10);
 			}
-
-			_putchar('\n');
+			else if (product >= 10 && product < 100)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + product / 10);
+				_putchar('0' + product % 10);
+			}
+			else
+			{
+				_putchar(' ');
+				_putchar('0' + product / 100);
+				_putchar('0' + (product / 10) % 10);
+				_putchar('0' + product % 10);
+			}
+			if (k != n)
+				_putchar(',');
 		}
-
 		_putchar('\n');
 	}
-
 }
