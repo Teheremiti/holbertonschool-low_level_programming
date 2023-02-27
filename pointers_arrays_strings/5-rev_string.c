@@ -29,10 +29,22 @@ void rev_string(char *s)
 {
 	int i = 0, len = _strlen(s), tmp;
 
-	for (; i <= len / 2; i++)
+	if (len % 2)
 	{
-		tmp = s[i];
-		s[i] = s[len - 1 - i];
-		s[len - 1 - i] = tmp;
+		for (; i <= len / 2; i++)
+		{
+			tmp = s[i];
+			s[i] = s[len - 1 - i];
+			s[len - 1 - i] = tmp;
+		}
+	}
+	else
+	{
+		for (; i <= len / 2 - 1; i++)
+                {
+                        tmp = s[i];
+                        s[i] = s[len - 1 - i];
+                        s[len - 1 - i] = tmp;
+                }
 	}
 }
