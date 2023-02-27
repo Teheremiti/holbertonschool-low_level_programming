@@ -2,6 +2,7 @@
 
 /**
  * reset_to_98 - Update the value it point to to 98
+ * @n: Input pointer
  * Return: void
  */
 
