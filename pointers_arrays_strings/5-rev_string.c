@@ -41,10 +41,10 @@ void rev_string(char *s)
 	else
 	{
 		for (; i <= len / 2 - 1; i++)
-                {
-                        tmp = s[i];
-                        s[i] = s[len - 1 - i];
-                        s[len - 1 - i] = tmp;
-                }
+		{
+			tmp = s[i];
+			s[i] = s[len - 1 - i];
+			s[len - 1 - i] = tmp;
+		}
 	}
 }
