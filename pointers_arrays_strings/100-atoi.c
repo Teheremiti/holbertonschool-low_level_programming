@@ -12,7 +12,7 @@ int _atoi(char *s)
 	int result = 0, sign = 1;
 
 	/** Skip any character that is not a digit */
-	while (*s < '0' || *s > '9')
+	while ((*s < '0' || *s > '9') && *s != '\0')
 	{
 		/** Take into account all the '-' before the number */
 		if (*s == '-')
