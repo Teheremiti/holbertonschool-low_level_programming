@@ -16,7 +16,7 @@ int _prime(int n, int i)
 	/** Si n est divisible par un autre nb que lui-même, il n'est pas premier */
 	else if (n % i == 0)
 		return (0);
-	
+
 	return (_prime(n, i - 1));
 }
 
