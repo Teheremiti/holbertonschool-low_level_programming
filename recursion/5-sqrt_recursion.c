@@ -2,7 +2,7 @@
 
 /**
  * _sqrt - Find the square root of n
- * @k: Input int
+ * @root: Input int
  * @n: Input int
  * Return: Square root of n
  */
