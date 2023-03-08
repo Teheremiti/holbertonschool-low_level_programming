@@ -4,6 +4,7 @@
 /**
  * _palindrome - Check if a string is a palindrome
  * @s: Input string
+ * @i: Input int, where we want the comparison to start
  * Return: 1 if s is a palindrome, otherwise 0
  */
 
@@ -17,7 +18,7 @@ int _palindrome(char *s, int i)
 	if (*s != s[max_i])
 		return (0);
 
-	return _palindrome(++s, ++i);
+	return (_palindrome(++s, ++i));
 }
 
 /**
@@ -28,5 +29,5 @@ int _palindrome(char *s, int i)
 
 int is_palindrome(char *s)
 {
-	return _palindrome(s, 0);
+	return (_palindrome(s, 0));
 }
