@@ -41,7 +41,7 @@ void print_times_table(int n)
 				_putchar('0' + (product / 10) % 10);
 				_putchar('0' + product % 10);
 			}
-			if (k != n)
+			if (k != n && n != 0)
 				_putchar(',');
 		}
 		_putchar('\n');
