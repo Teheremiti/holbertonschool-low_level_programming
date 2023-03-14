@@ -20,13 +20,13 @@ int *array_range(int min, int max)
 
 	len = max - min;
 
-	range = malloc(sizeof(*range) * len + 1);
+	range = malloc(sizeof(*range) * (len + 1));
 
 	if (range == NULL)
 		return (NULL);
 
-	for (i = 0; i < len; i++)
-		range[i] = min + i;
+	for (i = min; i <= max; i++)
+		range[i] = i;
 
 	return (range);
 }
