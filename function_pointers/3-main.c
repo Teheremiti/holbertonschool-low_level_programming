@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	num1 = atoi(argv[1]), num2 = atoi(argv[3]);
 	op = get_op_func(argv[2]);
 
-	if (op == NULL)
+	if (strlen(argv[2]) > 1 || op == NULL)
 	{
 		printf("Error\n");
 		exit(99);
