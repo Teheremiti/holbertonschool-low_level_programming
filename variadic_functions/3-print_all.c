@@ -57,29 +57,32 @@ void print_string(va_list ap)
 void print_all(const char * const format, ...)
 {
 	print_type_t print_type[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string},
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_string},
+		{0, NULL}
 	};
 
 	va_list ap;
 	int i, j;
+	char *separator = "";
 
 	va_start(ap, format);
 
 	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
+		printf("%s", separator);
+		separator = "";
+
 		j = 0;
-		while (j <= 3)
+		while (print_type[j].type != 0)
 		{
-			if (*print_type[j].type == format[i])
+			if (print_type[j].type == format[i])
 			{
 				print_type[j].f(ap);
-
-				if (format[i + 1] != '\0')
-					printf(", ");
+				separator = ", ";
 			}
 
 			j++;

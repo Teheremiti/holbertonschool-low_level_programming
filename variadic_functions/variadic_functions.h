@@ -20,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...);
 
 typedef struct print_type
 {
-	char *type;
+	char type;
 	void (*f)();
 } print_type_t;
 
