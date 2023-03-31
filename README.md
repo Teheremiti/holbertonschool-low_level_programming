@@ -22,7 +22,7 @@ Here are the different projects ordered in time :
 
 - [C - argc, argv](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/argc_argv) : manipulate argc and argv, `__attribute__((unused))` or `(void)` to compile with unused arguments
 
-- [C - Malloc, free](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/malloc_free) : Automatic and dynamic memory allocation, `malloc` and `free`, `valgrind` for memory leaks
+- [C - Malloc, free](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/malloc_free) : automatic and dynamic memory allocation, `malloc` and `free`, `valgrind` for memory leaks
 
 - [C - More malloc, free](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/more_malloc_free)
 
@@ -34,4 +34,4 @@ Here are the different projects ordered in time :
 
 - [C - Variadac functions](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/variadic_functions) : first time working with variadic functions, one step closer to making my very own `printf` !
 
-- [C - printf](https://github.com/Teheremiti/holbertonschool-printf) : First group project, implement our own simplified version of printf :fire:
+- [C - printf](https://github.com/Teheremiti/holbertonschool-printf) : First group project, implement our own simplified version of `printf` :fire:
