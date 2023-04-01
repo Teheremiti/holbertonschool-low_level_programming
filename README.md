@@ -1,4 +1,4 @@
-# First steps in C
+# :computer: First steps in C
 
 This is were my journey with the C language starts at Holberton School. This repository is divised into subprojects of increasing difficulty in C, from very basic to more advanced stuff.
 
@@ -30,8 +30,8 @@ Here are the different projects ordered in time :
 
 - [C - Structures, typedef](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/structures_typedef) : define, use and manipulate a structure and its elements, `typedef` to create aliases
 
-- [C - Function pointers](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/function_pointers) : first time using function pointers, this is were I coded my first simplified calculator :sunglasses:
+- [C - Function pointers](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/function_pointers) : first time using function pointers, this is were I coded my first simplified calculator :abacus:
 
-- [C - Variadac functions](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/variadic_functions) : first time working with variadic functions, one step closer to making my very own `printf` !
+- [C - Variadac functions](https://github.com/Teheremiti/holbertonschool-low_level_programming/tree/main/variadic_functions) : first time working with variadic functions, one step closer to building my very own `printf` !
 
 - [C - printf](https://github.com/Teheremiti/holbertonschool-printf) : First group project, implement our own simplified version of `printf` :fire:
