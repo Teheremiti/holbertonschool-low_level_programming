@@ -150,11 +150,29 @@ char *mul(char *num1, char *num2)
 
 int main(int argc, char **argv)
 {
-	char *num1 = removeZeroes(argv[1]), *num2 = removeZeroes(argv[2]);
-	char *product = removeZeroes(mul(num1, num2));
+	char *num1, *num2;
+	char *product;
+	int len1, len2;
 
 	if (argc != 3)
 		print_error();
+
+	len1 = strlen(argv[1]);
+	len2 = strlen(argv[2]);
+
+	num1 = malloc(len1 + 1);
+	if (num1 == NULL)
+		return (-1);
+	num1[len1 + 1] = '\0';
+
+	num2 = malloc(len2 + 1);
+	if (num2 == NULL)
+		return (-1);
+	num2[len2 + 1] = '\0';
+
+	num1 = removeZeroes(argv[1]);
+	num2 = removeZeroes(argv[2]);
+	product = removeZeroes(mul(num1, num2));
 
 	if (!digitsOnly(num1) || !digitsOnly(num2))
 		print_error();
