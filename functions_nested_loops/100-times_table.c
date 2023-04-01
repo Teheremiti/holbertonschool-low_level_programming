@@ -10,12 +10,20 @@ void print_times_table(int n)
 
 	if (n < 0 || n > 15)
 		return;
+
 	for (; i <= n; i++)
 	{
 		k = 1;
-
 		_putchar('0');
-		_putchar(',');
+
+		if (n != 0)
+			_putchar(',');
+		else
+		{
+			_putchar('\n');
+			return;
+		}
+
 		for (; k <= n; k++)
 		{
 			product = i * k;
@@ -41,7 +49,7 @@ void print_times_table(int n)
 				_putchar('0' + (product / 10) % 10);
 				_putchar('0' + product % 10);
 			}
-			if (k != n && n != 0)
+			if (k != n)
 				_putchar(',');
 		}
 		_putchar('\n');
