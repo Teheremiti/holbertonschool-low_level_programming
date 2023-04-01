@@ -42,8 +42,8 @@ int digitsOnly(char *str)
 
 
 /**
- * initializeToZero - Allocate memory for a string and initialize
- * every character to '0'
+ * initializeToZero - Allocate memory for an array of ints and
+ * initialize every character to 0
  *
  * @len: The number of blocks to allocate
  * @size: The size of each block in bytes
