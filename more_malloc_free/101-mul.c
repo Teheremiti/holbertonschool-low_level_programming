@@ -81,12 +81,12 @@ char *removeZeroes(char *strNum)
 	char *cleanNum = NULL;
 	int i, j, len = strlen(strNum);
 
+	for (i = 0; strNum[i] == '0'; i++)
+	{}
+
 	cleanNum = malloc(len * sizeof(char) + 1);
 	if (cleanNum == NULL)
 		return (NULL);
-
-	for (i = 0; strNum[i] == '0'; i++)
-	{}
 
 	for (j = 0; strNum[i] != '\0'; i++, j++)
 		cleanNum[j] = strNum[i];
@@ -134,7 +134,6 @@ char *mul(char *num1, char *num2)
 		strProduct[i] = product[i] + '0';
 
 	strProduct[i] = '\0';
-
 	free(product);
 	return (strProduct);
 }
