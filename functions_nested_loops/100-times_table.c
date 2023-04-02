@@ -24,8 +24,8 @@ void print_double(int num)
 {
 	_putchar(' ');
 	_putchar(' ');
-	_putchar('0' + product / 10);
-	_putchar('0' + product % 10);
+	_putchar('0' + num / 10);
+	_putchar('0' + num % 10);
 }
 
 /**
@@ -37,9 +37,9 @@ void print_double(int num)
 void print_triple(int num)
 {
 	_putchar(' ');
-	_putchar('0' + product / 100);
-	_putchar('0' + (product / 10) % 10);
-	_putchar('0' + product % 10);
+	_putchar('0' + num / 100);
+	_putchar('0' + (num / 10) % 10);
+	_putchar('0' + num % 10);
 }
 
 /**
