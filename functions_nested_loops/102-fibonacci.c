@@ -10,7 +10,7 @@ void fibonacci(void)
 {
 	unsigned long num1 = 1, num2 = 2, count = 2, tmp = num1;
 
-	printf("%d, %d\n", 1, 2);
+	printf("%d, %d, ", 1, 2);
 
 	for (count = 2; count < 50; count++)
 	{
