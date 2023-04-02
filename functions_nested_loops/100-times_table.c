@@ -2,6 +2,7 @@
 
 /**
  * print_single - Print a single digit number with appropriate formating
+ * @num: Number to print
  * Return: (void)
  */
 
@@ -15,6 +16,7 @@ void print_single(int num)
 
 /**
  * print_double - Print a two digits number with appropriate formating
+ * @num: Number to print
  * Return: (void)
  */
 
@@ -28,6 +30,7 @@ void print_double(int num)
 
 /**
  * print_triple - Print a three digits number with appropriate formating
+ * @num: Number to print
  * Return: (void)
  */
 
