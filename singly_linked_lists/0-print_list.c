@@ -15,9 +15,10 @@ size_t print_list(const list_t *h)
 	int count = 0;
 
 	node = malloc(sizeof(list_t));
-	if (node == NULL)
+	if (node == NULL || h == NULL)
 	{
 		free(node);
+		node = NULL;
 		return (0);
 	}
 
@@ -35,5 +36,7 @@ size_t print_list(const list_t *h)
 		node = node->next;
 		count++;
 	}
+	free(node);
+	node = NULL;
 	return (count);
 }
