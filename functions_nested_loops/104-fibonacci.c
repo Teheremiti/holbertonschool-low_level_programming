@@ -10,7 +10,7 @@
  * The code compiles and works but doesn't give the expected output
  * because an overflow is happening around the 94th term.
  * Since I can not use `long long`, pointers, arrays or structures,
- * I need to find an clever alternativecto this problem.
+ * I need to find a clever alternative to this problem.
  * If this message still appears, I still haven't found it :)
  */
 
