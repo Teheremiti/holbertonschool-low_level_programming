@@ -6,6 +6,13 @@
  * Return: (void)
  */
 
+/**
+ * The code compiles and works but doesn't give the expected output
+ * because an overflow is happening around the 94th term.
+ * Since I can not use `long long`, I need to find an clever alternative
+ * to this problem. If this message still appears, I haven't found it yet :)
+ */
+
 void fibonacci98(void)
 {
 	unsigned long num1 = 1, num2 = 2, tmp;
@@ -17,11 +24,18 @@ void fibonacci98(void)
 	{
 		printf(", ");
 
-		tmp = num1;
-		num1 = num2;
-		num2 += tmp;
+		/* Check where overflow starts */
+		if (num2 < num1)
+			printf("???");
 
-		printf("%lu", num2);
+		else
+		{
+			tmp = num1;
+			num1 = num2;
+			num2 += tmp;
+
+			printf("%lu", num2);
+		}
 
 		count++;
 	}
