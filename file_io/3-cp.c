@@ -16,7 +16,7 @@
 
 size_t cp(char *file_from, char *file_to)
 {
-	char buffer[1024];
+	char buffer[2877];
 	int fd1, fd2, check, count = 0;
 
 	fd1 = open(file_from, O_RDONLY);
@@ -39,7 +39,7 @@ size_t cp(char *file_from, char *file_to)
 	{
 		close(fd1);
 		close(fd2);
-		dprintf(STDERR_FILENO, "Error: CAN't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	count += check;
@@ -55,13 +55,13 @@ size_t cp(char *file_from, char *file_to)
 
 	if (close(fd1) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
 
 	if (close(fd2) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
 
