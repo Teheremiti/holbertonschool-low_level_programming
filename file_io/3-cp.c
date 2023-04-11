@@ -29,39 +29,29 @@ size_t cp(char *file_from, char *file_to)
 	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
-		close(fd1);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
+		close(fd1), exit(99);
 	}
 
 	check = read(fd1, buffer, 2877);
 	if (check == -1)
 	{
-		close(fd1);
-		close(fd2);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-		exit(98);
+		close(fd1), close(fd2), exit(98);
 	}
 	count += check;
 
 	check = write(fd2, buffer, check);
 	if (check == -1)
 	{
-		close(fd1);
-		close(fd2);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
+		close(fd1), close(fd2), exit(99);
 	}
 
-	if (close(fd1) == -1)
+	if (close(fd1) == -1 || close(fd2) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
-		exit(100);
-	}
-
-	if (close(fd2) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
+				 (fd1 == -1) ? fd1 : fd2);
 		exit(100);
 	}
 
