@@ -34,7 +34,7 @@ size_t cp(char *file_from, char *file_to)
 		exit(99);
 	}
 
-	check = read(fd1, buffer, 1024);
+	check = read(fd1, buffer, 2877);
 	if (check == -1)
 	{
 		close(fd1);
