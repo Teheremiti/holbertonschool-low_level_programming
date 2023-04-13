@@ -16,17 +16,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long index;
 	char *keyCopy = strdup(key);
 	char *valueCopy = strdup(value);
-	hash_node_t *newNode;
-	hash_node_t *tmp;
+	hash_node_t *newNode, *tmp;
 
-	if (keyCopy == NULL  || valueCopy == NULL)
+	if (ht == NULL || keyCopy == NULL  || valueCopy == NULL)
 	{
 		free(keyCopy), free(valueCopy);
 		return (0);
 	}
-
-	if (ht == NULL)
-		return (0);
 
 	if (*key == '\0' || key == NULL)
 		return (0);
