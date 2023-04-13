@@ -33,10 +33,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *)keyCopy, ht->size);
 	tmp = ht->array[index];
-	while (tmp->next != NULL)
+	while (tmp != NULL)
 	{
 		if (strcmp(tmp->key, keyCopy) == 0)
+		{
 			free(tmp->value);
+			tmp->value = valueCopy;
+			return (1);
+		}
 		tmp = tmp->next;
 	}
 
